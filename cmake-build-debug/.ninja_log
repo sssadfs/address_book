@@ -1,0 +1,9 @@
+# ninja log v6
+1176	1593	7555238362721173	Addresse_Books.exe	1fd458c95462cf0
+224	1579	7555165223834288	CMakeFiles/Addresse_Books.dir/dev-person.cpp.obj	1bf4ff8e6fb2783b
+199	1599	7555165223583557	CMakeFiles/Addresse_Books.dir/card-person.cpp.obj	9f5f6bad7a959ac0
+8	812	7555211927830367	CMakeFiles/Addresse_Books.dir/menu.cpp.obj	4fffa5a2a8bf4e4
+12	1176	7555238351068254	CMakeFiles/Addresse_Books.dir/user.cpp.obj	ad0bd3a8ba1df370
+36	1428	7555183953861530	CMakeFiles/Addresse_Books.dir/main.cpp.obj	59721408f63c8b49
+59	1902	7555188926602599	CMakeFiles/Addresse_Books.dir/card-book.cpp.obj	10a82d8d2aa57311
+44	1515	7555205073228884	CMakeFiles/Addresse_Books.dir/dev-book.cpp.obj	d26df34921ad9e25
