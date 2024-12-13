@@ -5,25 +5,16 @@
 #define FILENAME_C "card-book.txt"
 
 void Card_Book::addContact() {
-    auto** newSpace = new Card_Person * [1000];
-    if (this->m_Card_Person_Array != nullptr) {    //将原来空间下的数据拷贝到新空间下
-        for (int i = 0; i < this->m_Contact_Count; i++) {
-            newSpace[i] = this->m_Card_Person_Array[i];
-        }
-    }
+
     cout << "请输入新增联系人的姓名" << endl;
     string name;
     cin >> name;
     cout << "请输入新增联系人的电话号码" << endl;
     string phonenumber;
     cin >> phonenumber;
-    newSpace[this->m_Contact_Count] = new Card_Person(name, phonenumber);
-
-    this->m_Card_Person_Array = nullptr;
-    delete[] this->m_Card_Person_Array;
-
-    this->m_Card_Person_Array = newSpace;
+    this->m_Card_Person_Array[this->m_Contact_Count] = new Card_Person(name, phonenumber);
     this->m_Contact_Count += 1;
+
     this->save();
     cout << "成功添加一名联系人" << endl;
     system("pause");
@@ -118,12 +109,10 @@ Card_Book::Card_Book() {
     ifs >> bof;
     if (!ifs.is_open() or ifs.eof()) {
         this->m_Contact_Count = 0;
-        this->m_Card_Person_Array = nullptr;
         ifs.close();
         // cout << "empty file" << endl;
     }
     else {
-        // cout << "yes" << endl;
         this->init_Cont();
 
     }

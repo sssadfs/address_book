@@ -41,7 +41,6 @@ void User::copyDevToCard() {
         delete CB.m_Card_Person_Array[k];
         CB.m_Card_Person_Array[k] = nullptr;
     }
-    // delete [] CB.m_Card_Person_Array;
     for (int i = 0; i < DB.m_Contact_Count; i++) {
         CB.m_Card_Person_Array[i] = new Card_Person(DB.m_Dev_Person_Array[i]->getName(),DB.m_Dev_Person_Array[i]->getPhonenumber());
     }
@@ -57,7 +56,6 @@ void User::moveDevToCard() {
         delete DB.m_Dev_Person_Array[i];
         DB.m_Dev_Person_Array[i] = nullptr;
     }
-    // delete [] DB.m_Dev_Person_Array;
     CB.m_Contact_Count += DB.m_Contact_Count;
     DB.m_Contact_Count = 0;
 
@@ -73,7 +71,6 @@ void User::copyCardToDev() {
         delete DB.m_Dev_Person_Array[k];
         DB.m_Dev_Person_Array[k] = nullptr;
     }
-    // delete [] DB.m_Dev_Person_Array;
     for (int i = 0; i < CB.m_Contact_Count; i++) {
         DB.m_Dev_Person_Array[i] = new Dev_Person(CB.m_Card_Person_Array[i]->getName(),"None",CB.m_Card_Person_Array[i]->getPhonenumber(),"None");
     }

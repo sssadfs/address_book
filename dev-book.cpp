@@ -5,11 +5,8 @@
 #define FILENAME_D "dev-book.txt"
 
 void Dev_Book::addContact() {
-    auto** newSpace = new Dev_Person*[1000];
-    if (this->m_Dev_Person_Array != nullptr) {    //将原来空间下的数据拷贝到新空间下
-        for (int i = 0; i < this->m_Contact_Count; i++) {
-            newSpace[i] = this->m_Dev_Person_Array[i];
-        }
+    if (this->m_Dev_Person_Array == nullptr) {
+        this->m_Dev_Person_Array = new Dev_Person*[1000];
     }
     cout << "请输入新增联系人的姓名" << endl;
     string name;
@@ -23,13 +20,10 @@ void Dev_Book::addContact() {
     cout << "请输入新增联系人的QQ号码" << endl;
     string qqnumber;
     cin >> qqnumber;
-    newSpace[this->m_Contact_Count] = new Dev_Person(name, native, phonenumber, qqnumber);
 
-    this->m_Dev_Person_Array = nullptr;
-    delete [] this->m_Dev_Person_Array;
-
-    this->m_Dev_Person_Array = newSpace;
+    this->m_Dev_Person_Array[this->m_Contact_Count] = new Dev_Person(name, native, phonenumber, qqnumber);
     this->m_Contact_Count += 1;
+
     this->save();
     cout << "成功添加一名联系人" << endl;
     system("pause");
@@ -124,12 +118,10 @@ Dev_Book::Dev_Book(){
     ifs >> bof;
     if (!ifs.is_open() or ifs.eof()) {
         this->m_Contact_Count=0;
-        this->m_Dev_Person_Array = nullptr;
         ifs.close();
         // cout << "empty file" << endl;
     }
     else {
-        // cout << "yes" << endl;
         this->init_Cont();
 
     }
