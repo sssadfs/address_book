@@ -16,7 +16,8 @@ public:
     Dev_Book();
     void init_Cont();
     static int getContactCount();
-    [[nodiscard]] int isExist(const string& phone) const;
+    [[nodiscard]] int isExistP(const string& phone) const;
+    [[nodiscard]] int isExistN(const string& phone) const;
 
     ~Dev_Book() override;
 

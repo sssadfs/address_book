@@ -45,7 +45,7 @@ void User::copyDevToCard() {
         CB.m_Card_Person_Array[i] = new Card_Person(DB.m_Dev_Person_Array[i]->getName(),DB.m_Dev_Person_Array[i]->getPhonenumber());
     }
     CB.m_Contact_Count = DB.m_Contact_Count;
-    cout << "复制完成" << endl;
+    cout << "澶嶅埗瀹屾垚" << endl;
     CB.save();
     system("pause");
     system("cls");
@@ -59,7 +59,7 @@ void User::moveDevToCard() {
     CB.m_Contact_Count += DB.m_Contact_Count;
     DB.m_Contact_Count = 0;
 
-    cout << "移动完成" << endl;
+    cout << "绉诲姩瀹屾垚" << endl;
     DB.save();
     CB.save();
     system("pause");
@@ -75,7 +75,7 @@ void User::copyCardToDev() {
         DB.m_Dev_Person_Array[i] = new Dev_Person(CB.m_Card_Person_Array[i]->getName(),"None",CB.m_Card_Person_Array[i]->getPhonenumber(),"None");
     }
     DB.m_Contact_Count = CB.m_Contact_Count;
-    cout << "复制完成" << endl;
+    cout << "澶嶅埗瀹屾垚" << endl;
     DB.save();
     system("pause");
     system("cls");
@@ -89,7 +89,7 @@ void User::moveCardToDev() {
     DB.m_Contact_Count += CB.m_Contact_Count;
     CB.m_Contact_Count = 0;
 
-    cout << "移动完成" << endl;
+    cout << "绉诲姩瀹屾垚" << endl;
     DB.save();
     CB.save();
     system("pause");

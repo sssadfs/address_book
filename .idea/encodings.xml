@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/address-book.h" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/card-book.cpp" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/card-book.h" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/card-person.cpp" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/card-person.h" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/dev-book.cpp" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/dev-book.h" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/dev-person.cpp" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/dev-person.h" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/main.cpp" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/menu.cpp" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/menu.h" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/user.cpp" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/user.h" charset="GBK" />
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/address-book.h" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/card-book.cpp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/card-book.h" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/card-person.cpp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/card-person.h" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dev-book.cpp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dev-book.h" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dev-person.cpp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dev-person.h" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/main.cpp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/menu.cpp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/menu.h" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/user.cpp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/user.h" charset="UTF-8" />
   </component>
 </project>

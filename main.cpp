@@ -1,7 +1,15 @@
 #include "menu.h"
 #include "user.h"
+#include <locale>
 
 int main() {
+
+#ifdef _WIN32
+        system ("CHCP 65001"); // ä»…åœ¨Win32ä¸‹ç¼–è¯‘ï¼Œè®¾ç½®æ§åˆ¶å°ç¼–ç ä¸ºUTF-8ã€‚
+#else
+        setlocale (LC_ALL, "zh_CN.UTF-8"); // For POSIX.
+#endif
+
     User usr;
     string option;
     string choice;
@@ -15,7 +23,7 @@ int main() {
         Menu::Display2();
     }
     else if (option == "0") {
-        cout << "»¶Ó­ÏÂ´ÎÊ¹ÓÃ" << endl;
+        cout << "æ¬¢è¿ä¸‹æ¬¡ä½¿ç”¨" << endl;
         system("pause");
         return 0;
     }
@@ -25,7 +33,7 @@ int main() {
         Menu::Display1();
     }
     cin >> choice;
-    if (choice=="0")       //option=="2"²Ù×÷ÊÖ»ú¿¨
+    if (choice=="0")       //option=="2"æ“ä½œæ‰‹æœºå¡
             goto begin;
     else if (choice=="1")
             option=="2"?usr.addContactC():usr.addContactD();
@@ -42,7 +50,7 @@ int main() {
     else if (choice=="7")
             option=="2"?usr.copyCardToDev():usr.copyDevToCard();
     else{
-            cout << "ÇëÖØĞÂÊäÈë" << endl;
+            cout << "è¯·é‡æ–°è¾“å…¥" << endl;
             system("pause");
     }
     if (option=="2")

@@ -2,7 +2,7 @@
 #include <iostream>
 
 Card_Person::Card_Person(){
-    this->m_name = "Àî»ª";
+    this->m_name = "æŽåŽ";
     this->m_phoneNumber= "12345678901";
 }
 
@@ -36,9 +36,9 @@ ostream& operator<<(ostream& os, Card_Person& p) {
 }
 
 istream& operator>>(istream& is, Card_Person& p) {
-    cout << "ÇëÊäÈëÐÞ¸ÄºóµÄÐÕÃû" << endl;
+    cout << "è¯·è¾“å…¥ä¿®æ”¹åŽçš„å§“å" << endl;
     cin >> p.m_name;
-    cout << "ÇëÊäÈëÐÞ¸ÄºóµÄµç»°ºÅÂë" << endl;
+    cout << "è¯·è¾“å…¥ä¿®æ”¹åŽçš„ç”µè¯å·ç " << endl;
     cin >> p.m_phoneNumber;
     return is;
 }

@@ -2,8 +2,8 @@
 #include <iostream>
 
 Dev_Person::Dev_Person(){
-    this->m_name = "Àî»ª";
-    this->m_native = "Ì©°²ÊĞ";
+    this->m_name = "æå";
+    this->m_native = "æ³°å®‰å¸‚";
     this->m_phoneNumber= "12345678901";
     this->m_qqNumber = "987654321";
 }
@@ -50,13 +50,13 @@ ostream& operator<<(ostream& os, Dev_Person& p) {
 }
 
 istream& operator>>(istream& is, Dev_Person& p) {
-    cout << "ÇëÊäÈëĞŞ¸ÄºóµÄĞÕÃû" << endl;
+    cout << "è¯·è¾“å…¥ä¿®æ”¹åçš„å§“å" << endl;
     cin >> p.m_name;
-    cout << "ÇëÊäÈëĞŞ¸ÄºóµÄ¼®¹á" << endl;
+    cout << "è¯·è¾“å…¥ä¿®æ”¹åçš„ç±è´¯" << endl;
     cin >> p.m_native;
-    cout << "ÇëÊäÈëĞŞ¸ÄºóµÄµç»°ºÅÂë" << endl;
+    cout << "è¯·è¾“å…¥ä¿®æ”¹åçš„ç”µè¯å·ç " << endl;
     cin >> p.m_phoneNumber;
-    cout << "ÇëÊäÈëĞŞ¸ÄºóµÄQQºÅÂë" << endl;
+    cout << "è¯·è¾“å…¥ä¿®æ”¹åçš„QQå·ç " << endl;
     cin >> p.m_qqNumber;
     return is;
 }

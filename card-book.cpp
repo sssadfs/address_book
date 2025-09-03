@@ -6,39 +6,39 @@
 
 void Card_Book::addContact() {
 
-    cout << "ÇëÊäÈëĞÂÔöÁªÏµÈËµÄĞÕÃû" << endl;
+    cout << "è¯·è¾“å…¥æ–°å¢è”ç³»äººçš„å§“å" << endl;
     string name;
     cin >> name;
-    cout << "ÇëÊäÈëĞÂÔöÁªÏµÈËµÄµç»°ºÅÂë" << endl;
+    cout << "è¯·è¾“å…¥æ–°å¢è”ç³»äººçš„ç”µè¯å·ç " << endl;
     string phonenumber;
     cin >> phonenumber;
     this->m_Card_Person_Array[this->m_Contact_Count] = new Card_Person(name, phonenumber);
     this->m_Contact_Count += 1;
 
     this->save();
-    cout << "³É¹¦Ìí¼ÓÒ»ÃûÁªÏµÈË" << endl;
+    cout << "æˆåŠŸæ·»åŠ ä¸€åè”ç³»äºº" << endl;
     system("pause");
     system("cls");
 }
 
 void Card_Book::delContact() {
     if (this->m_Contact_Count <= 0) {
-        cout << "¼ÇÂ¼Îª¿Õ" << endl;
+        cout << "è®°å½•ä¸ºç©º" << endl;
     }
     else {
-        cout << "ÇëÊäÈëĞèÒªÉ¾³ıµÄÁªÏµÈËµÄµç»°ºÅÂë" << endl;
+        cout << "è¯·è¾“å…¥éœ€è¦åˆ é™¤çš„è”ç³»äººçš„ç”µè¯å·ç " << endl;
         string phone;
         cin >> phone;
-        int ret = this->isExist(phone);     //»ñÈ¡´ıÉ¾ÁªÏµÈËµÄÊı×éÏÂ±ê
+        int ret = this->isExistP(phone);     //è·å–å¾…åˆ è”ç³»äººçš„æ•°ç»„ä¸‹æ ‡
         if (ret == -1) {
-            cout << "É¾³ıÊ§°Ü£¬²éÎŞ´ËÈË" << endl;
+            cout << "åˆ é™¤å¤±è´¥ï¼ŒæŸ¥æ— æ­¤äºº" << endl;
         }
         else {
             for (int i = ret; i < this->m_Contact_Count; i++) {
                 this->m_Card_Person_Array[i] = this->m_Card_Person_Array[i + 1];
             }
             this->m_Contact_Count -= 1;
-            cout << "É¾³ı³É¹¦" << endl;
+            cout << "åˆ é™¤æˆåŠŸ" << endl;
             this->save();
 
         }
@@ -49,7 +49,7 @@ void Card_Book::delContact() {
 
 void Card_Book::displayAll() {
     if (this->m_Contact_Count <= 0) {
-        cout << "¼ÇÂ¼Îª¿Õ" << endl;
+        cout << "è®°å½•ä¸ºç©º" << endl;
     }
     else {
         for (int i = 0; i < this->m_Contact_Count; i++) {
@@ -62,19 +62,19 @@ void Card_Book::displayAll() {
 
 void Card_Book::editContact() {
     if (this->m_Contact_Count <= 0) {
-        cout << "¼ÇÂ¼Îª¿Õ" << endl;
+        cout << "è®°å½•ä¸ºç©º" << endl;
     }
     else {
-        cout << "ÇëÊäÈëĞŞ¸ÄµÄÁªÏµÈËµÄºÅÂë" << endl;
+        cout << "è¯·è¾“å…¥ä¿®æ”¹çš„è”ç³»äººçš„å·ç " << endl;
         string phone;
         cin >> phone;
-        int ret = this->isExist(phone);
+        int ret = this->isExistP(phone);
         if (ret == -1) {
-            cout << "ĞŞ¸ÄÊ§°Ü£¬²éÎŞ´ËÈË" << endl;
+            cout << "ä¿®æ”¹å¤±è´¥ï¼ŒæŸ¥æ— æ­¤äºº" << endl;
         }
         else {
             cin >> *this->m_Card_Person_Array[ret];
-            cout << "ĞŞ¸Ä³É¹¦" << endl;
+            cout << "ä¿®æ”¹æˆåŠŸ" << endl;
             this->save();
         }
     }
@@ -84,18 +84,18 @@ void Card_Book::editContact() {
 
 void Card_Book::findContact() {
     if (this->m_Contact_Count <= 0) {
-        cout << "¼ÇÂ¼Îª¿Õ" << endl;
+        cout << "è®°å½•ä¸ºç©º" << endl;
     }
     else {
         string name;
-        cout << "ÇëÊäÈë²éÕÒµÄÁªÏµÈËµÄĞÕÃû" << endl;
+        cout << "è¯·è¾“å…¥æŸ¥æ‰¾çš„è”ç³»äººçš„å§“å" << endl;
         cin >> name;
-        int ret = this->isExist(name);
+        int ret = this->isExistN(name);
         if (ret == -1) {
-            cout << "²éÎŞ´ËÈË" << endl;
+            cout << "æŸ¥æ— æ­¤äºº" << endl;
         }
         else {
-            cout << "²éÕÒµ¹ÁËÃûÎª" << name << "µÄÁªÏµÈË£¬ÏêÏ¸ĞÅÏ¢ÈçÏÂ£º" << endl;
+            cout << "æŸ¥æ‰¾å€’äº†åä¸º" << name << "çš„è”ç³»äººï¼Œè¯¦ç»†ä¿¡æ¯å¦‚ä¸‹ï¼š" << endl;
             cout << *this->m_Card_Person_Array[ret] << endl;
         }
     }
@@ -147,7 +147,7 @@ int Card_Book::getContactCount() {
     return num;
 }
 
-int Card_Book::isExist(const string& phone) const {
+int Card_Book::isExistP(const string& phone) const {
     int flag = -1;
     for (int i = 0; i < this->m_Contact_Count; i++) {
         if (m_Card_Person_Array[i]->getPhonenumber() == phone) {
@@ -157,6 +157,15 @@ int Card_Book::isExist(const string& phone) const {
     return flag;
 }
 
+int Card_Book::isExistN(const string& name) const {
+    int flag = -1;
+    for (int i = 0; i < this->m_Contact_Count; i++) {
+        if (m_Card_Person_Array[i]->getName() == name) {
+            flag = i;
+        }
+    }
+    return flag;
+}
 
 Card_Book::~Card_Book() {
     this->save();
